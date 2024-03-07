@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import Home from './Home.js';
+import Home from './Home.js';
 import Effect from './Home.js';
+import Login from './login.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Effect />
+    <Login />
+    {/* <Effect/> */}
   </React.StrictMode>
 );
 

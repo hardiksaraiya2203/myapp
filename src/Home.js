@@ -34,7 +34,7 @@ const Effect = () => {
 
     return (
         data.map((v) => {
-            return <div>{v.id}</div>
+            return <div>{v.id} {v.email} {v.body}</div>
         })
 
     )
