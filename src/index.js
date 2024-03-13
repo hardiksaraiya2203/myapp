@@ -11,11 +11,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Registration from './Registration';
 import BasicForm from './BasicForm';
 import FormikForm from './FormikForm';
+import EMP from './EMP';
+import EMPWITHYUK from './EMPWITHYUK';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <FormikForm />
+    <EMPWITHYUK />
   </React.StrictMode>
 );
 
