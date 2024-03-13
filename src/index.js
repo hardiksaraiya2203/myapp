@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Home from './Home.js';
-import Effect from './Home.js';
-import Login from './login.js';
+import App from './App';
+import Home from './Home';
+import Effect from './Home';
+import Login from './login';
+import Product from './Product';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Registration from './Registration';
+import BasicForm from './BasicForm';
+import FormikForm from './FormikForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Login />
-    {/* <Effect/> */}
+    <FormikForm />
   </React.StrictMode>
 );
 
