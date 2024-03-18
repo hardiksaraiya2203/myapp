@@ -2,7 +2,7 @@ import React from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup'
 
-const EMPWITHYUK = () => {
+const EMPWITHYUP = () => {
     const initialValues = {
         fullname: '',
         username: '',
@@ -10,11 +10,14 @@ const EMPWITHYUK = () => {
         password: '',
         confirmPassword: '',
         acceptTerms: false,
+        gender: '',
+        country: ''
     };
     const handleSubmit = (data) => {
 
 
         console.log(JSON.stringify(data));
+        // console.log((data));
     }
     const validationSchema = () => {
         return Yup.object().shape({
@@ -35,6 +38,8 @@ const EMPWITHYUK = () => {
                 .required('Confirm Password is required')
                 .oneOf([Yup.ref('password'), null], 'Confirm Password does not match'),
             acceptTerms: Yup.bool().oneOf([true], 'Accept Terms is required'),
+            country: Yup.string('please select country'),
+            gender: Yup.string('please select gender')
         });
     }
     return (
@@ -122,6 +127,31 @@ const EMPWITHYUK = () => {
                         />
                     </div>
 
+                    <div role='group' aria-labelledby="my-radio-group">
+                        <label>
+                            <Field type="radio" name="gender" value="Male">Male</Field>
+                        </label>
+                        <label>
+                            <Field type="radio" name="gender" value="Female">Female</Field>
+                        </label>
+                        <ErrorMessage
+                            name="gender"
+                            component="div"
+                            className="text-danger"
+                        />
+                    </div>
+
+                    <Field name="country" as='select'>
+                        <option value="" disabled>---select---</option>
+                        <option value="in">India</option>
+                        <option value="us">USA</option>
+                        <option value="cn">Canada</option></Field>
+                    <ErrorMessage
+                        name="country"
+                        component="div"
+                        className="text-danger" />
+
+
                     <div className="form-group">
                         <button type="submit"
                             className="btn btn-primary">
@@ -144,4 +174,4 @@ const EMPWITHYUK = () => {
     )
 }
 
-export default EMPWITHYUK
+export default EMPWITHYUP

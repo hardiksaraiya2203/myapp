@@ -12,12 +12,17 @@ import Registration from './Registration';
 import BasicForm from './BasicForm';
 import FormikForm from './FormikForm';
 import EMP from './EMP';
-import EMPWITHYUK from './EMPWITHYUK';
+import EMPWITHYUP from './EMPWITHYUP';
+import MyExample from './MyExample';
+import TokenLogin from './TokenLogin';
+import TokenAccount from './TokenAccount';
+import './TokenGlobal'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <EMPWITHYUK />
+    <TokenLogin />
+    <TokenAccount />
   </React.StrictMode>
 );
 

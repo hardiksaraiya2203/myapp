@@ -14,7 +14,7 @@ const EMP = () => {
     const handleSubmit = (data) => {
         console.log(JSON.stringify(data));
     }
-    const validateEmployee = empData => {
+    const validateEmployee = (empData) => {
         console.log(empData);
         const errors = {};
 

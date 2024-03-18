@@ -7,7 +7,7 @@ const BasicForm = () => {
             email: '',
             password: ''
         },
-        onSubmit: val => {
+        onSubmit: (val) => {
             console.log(val);
         }
     });
