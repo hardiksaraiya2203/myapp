@@ -16,7 +16,7 @@ import EMPWITHYUP from './EMPWITHYUP';
 import MyExample from './MyExample';
 import TokenLogin from './TokenLogin';
 import TokenAccount from './TokenAccount';
-import './TokenGlobal'
+// import './TokenGlobal'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

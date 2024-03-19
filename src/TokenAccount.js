@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import authToken from './Custom';
 
 export default function TokenAccount() {
 
@@ -7,15 +8,9 @@ export default function TokenAccount() {
 
     useEffect(()=>{
         let token = JSON.parse(localStorage.getItem('tokenNew'));
-        axios.get('https://real-pear-fly-kilt.cyclic.app/accounts'
-        // ,{
-        //     headers: {
-        //         'Content-Type': "application/json",
-        //         Authorization: `Bearer ${token.jwtToken}`           
-        //     }
-        // }
+        authToken.get('/accounts'
         ).then(y=>{
-            console.log(y.data)
+          console.log(y.data)
         }).catch(y=>{
             console.log(y);
         })
@@ -26,3 +21,10 @@ export default function TokenAccount() {
     </div>
   )
 }
+
+          // ,{
+          //     headers: {
+          //         'Content-Type': "application/json",
+          //         Authorization: `Bearer ${token.jwtToken}`           
+          //     }
+          // }
