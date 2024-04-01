@@ -16,13 +16,19 @@ import EMPWITHYUP from './EMPWITHYUP';
 import MyExample from './MyExample';
 import TokenLogin from './TokenLogin';
 import TokenAccount from './TokenAccount';
+import MyUsers from './MyUsers';
+import { BrowserRouter } from "react-router-dom";
+import Test from './Test';
+import MyData from './MyData';
+
 // import './TokenGlobal'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <TokenLogin />
-    <TokenAccount />
+    <BrowserRouter>
+      <MyData />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
