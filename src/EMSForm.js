@@ -29,7 +29,7 @@ const EMSForm = (props) => {
                     onSubmit: (event) => {
                         event.preventDefault();
                         let p = [...props.data];
-                        p.push(form);
+                        p.push({...form, id: p.length+1});
                         props.setData(p)
 
                         props.handleClose();

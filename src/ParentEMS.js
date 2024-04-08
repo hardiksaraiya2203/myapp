@@ -30,7 +30,7 @@ const ParentEMS = () => {
             
             setData={setData}
             />
-            <EMSDisplay data={data}/>
+            <EMSDisplay data={data} />
 
         </div>
     )
